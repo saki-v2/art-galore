@@ -1,0 +1,255 @@
+main{
+  background-color: #dcddd3;
+}
+
+
+
+.Nav-bar {
+    position: sticky;
+    top: 0;
+    background-color: #dcddd3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 4rem;
+    height: 6rem;
+    gap: 2rem;
+    border-bottom: 1px solid black;
+    font-family: "Inter", system-ui, sans-serif;
+    font-weight: 400;
+    z-index: 1000;
+}
+
+.logo{
+    color: black;
+    font-size: 1.6rem;
+    font-weight:800;
+    text-wrap:nowrap;
+    transition:  0.3s ease-in-out;
+}
+
+.logo:hover{
+    transform:scale(1.1);
+}
+
+.Nav-bar .logo,
+.Nav-bar .logo:hover,
+.Nav-bar .logo:visited {
+  text-decoration: none;
+  border: none;
+  outline: none;
+  color: black;
+}
+
+.Nav-bar ul {
+  display: flex;
+  gap: 3.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Nav-bar li a {
+  font-size: 1rem;
+  color: black;
+  text-decoration: none;
+  background: linear-gradient(black, black) left bottom / 0 2px no-repeat;
+  transition: background-size 0.25s ease;
+}
+
+.Nav-bar li a:hover {
+  background-size: 100% 2px;
+}
+
+.cart-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.75rem 1rem;
+    background: #161616;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.cart-btn:hover {
+  background: #0d330e;
+}
+
+.hero{
+  margin: 4rem 6rem;
+}
+
+.hero
+.carousel{
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hero .carousel-item img {
+    aspect-ratio: 16 / 7;
+    object-fit: cover;
+    object-position: center 10%;
+}
+
+
+.hero 
+.carousel-inner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 65%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 12rem;            
+    transform: translateY(-50%);
+    max-width: 28rem;
+    z-index: 2;
+    color: #fff;
+    pointer-events: none;  
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.shop-now {
+    padding: 0.75rem 1.25rem;
+    background: #fff;
+    color: #161616;
+    border: 0;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+    pointer-events: auto;  
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.shop-now:hover {
+    background: #0d330e;
+    color: #fff;
+}
+
+.hero .carousel-control-prev,
+.hero .carousel-control-next {
+    z-index: 3;
+}
+
+.hero .carousel-control-prev-icon,
+.hero .carousel-control-next-icon {
+    background-color: rgba(24, 20, 20, 0.6);
+    border-radius: 50%;
+    padding: 1.2rem;
+    background-size: 50%;
+}
+
+
+
+
+
+
+
+
+
+#root{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer{
+    margin-top: auto;
+    background-color: #242c27;
+    color: #ffffff;
+    font-family: inherit;
+    padding: 40px 60px 20px 60px;
+}
+
+.footer *{
+    font-family: inherit;
+}
+
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.f1 h1{
+    margin: 0 0 10px 0;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.f1 p{
+    margin: 0;
+}
+
+.contact-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-list li{
+    margin-bottom: 12px;
+}
+
+.contact-list i{
+    font-size: 22px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.media i{
+    font-size: 28px;
+    margin-right: 18px;
+    cursor: pointer;
+}
+
+.media i:hover{
+    opacity: 0.7;
+}
+
+.f2{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.f2 p{
+    margin: 0 0 10px 0;
+}
+
+@media (max-width: 700px){
+    .footer{
+        padding: 30px 20px 20px 20px;
+    }
+
+    .footer-top{
+        flex-direction: column;
+    }
+}
