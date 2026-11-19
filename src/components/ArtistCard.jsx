@@ -5,10 +5,15 @@ export default function ArtistCard() {
     const [artists, setArtists] = useState([])
 
     useEffect(() => {
-        fetch("/db.json")
-            .then((response) => response.json())
-            .then((data) => setArtists(data.artists))
-            .catch((error) => console.error("Failed to load"))
+        fetch("http://localhost:3000/artists")
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Could not load the artists")
+                }
+                return response.json()
+            })
+            .then((data) => setArtists(data))
+            .catch((error) => console.error("Failed to load:", error))
     }, [])
 
     return (

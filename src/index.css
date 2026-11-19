@@ -594,6 +594,10 @@ html {
     font-size: 1.1rem;
 }
 
+.product-card .card {
+    cursor: pointer;
+}
+
 @media (max-width: 992px) {
     .shop-layout {
         grid-template-columns: 1fr;

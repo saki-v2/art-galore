@@ -12,18 +12,21 @@ export default function Shop(){
     const [search, setSearch] = useState("")
 
     useEffect(() => {
-        fetch("/db.json")
-        .then((response) => {
-            if (!response.ok) {
-                throw new Error("Could not load the products")
-            }
-            return response.json()
-        })
-        .then((data) => {
-            setArtists(data.artists)
-            setArtworks(data.artworks)
-        })
-        .catch((error) => console.error("Failed to load"))
+        Promise.all([
+            fetch("http://localhost:3000/artists"),
+            fetch("http://localhost:3000/artworks"),
+        ])
+            .then(([artistsRes, artworksRes]) => {
+                if (!artistsRes.ok || !artworksRes.ok) {
+                    throw new Error("Could not load the products")
+                }
+                return Promise.all([artistsRes.json(), artworksRes.json()])
+            })
+            .then(([artistsData, artworksData]) => {
+                setArtists(artistsData)
+                setArtworks(artworksData)
+            })
+            .catch((error) => console.error("Failed to load:", error))
     }, [])
 
     const filteredArtworks = artworks.filter((artwork) =>
@@ -55,7 +58,10 @@ export default function Shop(){
                         const inCart = cart.some((item) => item.id === artwork.id)
 
                         return (
-                            <article key={artwork.id} className="card">
+                            <article key={artwork.id}
+                            className="card" 
+                            onClick={() => navigate('/artwork/${artwork.id}')}
+                            >
                                 <img src={artwork.image} className="card-img-top" alt={artwork.title}/>
                                 <div className="card-body">
                                     <h4 className="card-title">{artwork.title}</h4>
@@ -67,7 +73,10 @@ export default function Shop(){
                                         type="button"
                                         className="add-to-cart"
                                         disabled={!artwork.available || inCart}
-                                        onClick={() => addToCart(artwork)}
+                                        onClick={(e) => {
+                                            e.stopPropagation()
+                                            addToCart(artwork)
+                                        }}
                                     >
                                         {!artwork.available ? "Sold out" : inCart ? "In cart" : "Add to cart"}
                                     </button>

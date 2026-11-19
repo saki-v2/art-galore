@@ -6,6 +6,7 @@ import NavBar from './components/NavBar'
 import ErrorPage from './pages/ErrorPage'
 import Shop from './pages/Shop'
 import { CartProvider } from './context/CartContext'
+import ArtworkDetail from './pages/ArtworkDetail'
 
 export default function App() {
   
@@ -19,6 +20,7 @@ export default function App() {
           <Routes>
             <Route path='/' element={<Landing />}/>
             <Route path='/shop' element={<Shop />} />
+            <Route path='artwork/:id' element={<ArtworkDetail />}/>
             <Route path='*' element={<ErrorPage />} />
           </Routes>
 
