@@ -511,6 +511,13 @@ html {
     cursor: not-allowed;
 }
 
+.search-bar{
+    width: 540px;
+    border: none;
+    height: 35px;
+    border-radius: 7px;
+}
+
 @media (max-width: 768px) {
     .shop { margin: 2rem 1.25rem; }
 }
