@@ -1,29 +1,36 @@
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link/dist/react-router-hash-link.cjs.production";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
+
 export default function NavBar (){
+
+    const {cart} = useContext(CartContext)
 
 
     return(
         <header className="Nav-bar">
-            <a className="logo" href="#hero">Art Galore</a>
+            <HashLink className="logo" to="/#hero">Art Galore</HashLink>
 
             <nav>
                 <ul>
                     <li>
-                        <a href="#">Our Story</a>
+                        <HashLink to="/#about">Our Story</HashLink>
                     </li>
                     <li>
-                        <a href="#">The Artists</a>
+                        <HashLink to="/#artist">The Artists</HashLink>
                     </li>
                     <li>
-                        <a href="#">Shop</a>
+                        <HashLink to="/shop">Shop</HashLink>
                     </li>
                     <li>
-                        <a href="#">Reviews</a>
+                        <HashLink to="/#reviews">Reviews</HashLink>
                     </li>
                 </ul>
             </nav>
 
             <button type="button" className="cart-btn">
-                <i className="bi bi-cart" aria-hidden="true"></i> Cart
+                <i className="bi bi-cart" aria-hidden="true"></i> Cart / {cart.length}
             </button>
             
         </header>

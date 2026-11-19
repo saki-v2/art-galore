@@ -12,20 +12,20 @@ export default function Footer(){
                 <div className="contact" id="footer">
                     <ul className="contact-list">
                         <li>
-                            <span><i class="bi bi-envelope-at-fill"></i> hello@artgalore.studio</span>
+                            <span><i className="bi bi-envelope-at-fill"></i> hello@artgalore.studio</span>
                         </li>
                         <li>
-                            <span><i class="bi bi-telephone-fill"></i> +254 712 345 678 | +254 798 765 432</span>
+                            <span><i className="bi bi-telephone-fill"></i> +254 712 345 678 | +254 798 765 432</span>
                         </li>
                         <li>
-                            <span><i class="bi bi-clock-fill"></i> 08.30Hrs - 16.45Hrs</span>
+                            <span><i className="bi bi-clock-fill"></i> 08.30Hrs - 16.45Hrs</span>
                         </li>
 
                         <li className="media-icons">
-                            <i class="bi bi-facebook"></i>
-                            <i class="bi bi-twitter"></i>
-                            <i class="bi bi-linkedin"></i>
-                            <i class="bi bi-youtube"></i>
+                            <i className="bi bi-facebook"></i>
+                            <i className="bi bi-twitter"></i>
+                            <i className="bi bi-linkedin"></i>
+                            <i className="bi bi-youtube"></i>
                         </li>
 
                     </ul>

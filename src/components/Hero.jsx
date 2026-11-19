@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom"
 import hero1 from "../assets/hero1.jpg"
 import hero2 from "../assets/hero2.jpg"
 import hero3 from "../assets/hero3.jpg"
@@ -6,10 +7,7 @@ import hero5 from "../assets/hero5.jpg"
 
 export default function Hero() {
 
-    const navigateToShop = () => {
-        document.getElementById("shop")?.navigateToView({behavior : "smooth"})
-    }
-
+  const Navigate = useNavigate()
 
   return (
     <section className="hero" id="hero">
@@ -62,7 +60,9 @@ export default function Hero() {
         <div className="hero-text">
             <h1>Welcome to Art Galore</h1>
             <p>Discover, collect and enjoy pieces made right here in Nairobi</p>
-            <button type="button" className="shop-now" onClick={navigateToShop}>Shop now</button>
+            <button type="button" 
+            className="shop-now" 
+            onClick={() => Navigate("/shop")}>Shop now</button>
         </div>
 
 

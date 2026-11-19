@@ -1,20 +1,24 @@
 main{
   background-color: #dcddd3;
 }
+html {
+    scroll-padding-top: 6.5rem;
+}
 
-
-
+/*Navbar*/
 .Nav-bar {
+    width: 100%;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
     position: sticky;
     top: 0;
     background-color: #dcddd3;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 4rem;
     height: 6rem;
     gap: 2rem;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid grey;
     font-family: "Inter", system-ui, sans-serif;
     font-weight: 400;
     z-index: 1000;
@@ -80,6 +84,7 @@ main{
   background: #0d330e;
 }
 
+/*Hero*/
 .hero{
   margin: 4rem 6rem;
 }
@@ -148,6 +153,7 @@ main{
 .shop-now:hover {
     background: #0d330e;
     color: #fff;
+    scale: 1.02;
 }
 
 .hero .carousel-control-prev,
@@ -163,14 +169,7 @@ main{
     background-size: 50%;
 }
 
-
-
-
-
-
-
-
-
+/*Footer*/
 #root{
     min-height: 100vh;
     display: flex;
@@ -251,5 +250,396 @@ main{
 
     .footer-top{
         flex-direction: column;
+    }
+}
+ 
+/*About-section*/
+.about {
+  margin: 4rem 6rem;
+  background-color: #e6e7dd;
+  padding: 4rem;
+  box-sizing: border-box;
+}
+
+.about-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: stretch;
+}
+
+.about-left {
+    border-right: 1px solid #59645c;
+    padding-right: 2rem;
+}
+
+.about-left h3 {
+    color: #d45a3c;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.about-left h2 {
+    color: #242c27;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 500;
+    line-height: 1.25;
+    margin: 0;
+    max-width: 600px;
+}
+
+.about-right p {
+    color: #667066;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 7px 0 25px;
+}
+
+.about-right span {
+    color: #242c24;
+    font-size: 14px;
+    font-weight: 800;
+}
+@media (max-width: 768px) {
+    .about {
+        padding: 2rem;
+    }
+
+    .about-info {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-left h2 {
+        font-size: 32px;
+    }
+
+    .about-left{
+        border-right: none;
+        border-bottom: 1px solid #59645c;
+        padding-right: 0;
+        padding-bottom: 2rem;
+    }
+
+    .about-right p {
+        font-size: 16px;
+    }
+}
+
+/*ArtCards*/
+.artist {
+    padding: 4rem 6rem;
+}
+
+.artist h3 {
+    color: #d45a3c;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+.artist h2 {
+    color: #242c27;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 500;
+    line-height: 1.25rem;
+    margin: 0;
+}
+
+.artist-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.artist-card .card {
+    display: grid;
+    grid-template-columns: 112px 1fr;
+    grid-template-areas:
+        "photo name"
+        "photo specialty"
+        "photo location"
+        "bio bio";
+    column-gap: 1.25rem;
+    align-content: start;
+    padding: 1.25rem;
+    background-color: #e6e7dd;
+    border: none;
+    border-radius: 6px;
+}
+
+.artist-card .card-body {
+    display: contents;
+}
+
+.artist-card .card-img-start {
+    grid-area: photo;
+    width: 115px;
+    height: 135px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.artist-card .card-title {
+    grid-area: name;
+    margin: 0.5rem 0 0.4rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #242c27;
+}
+
+.artist-card .card-text {
+    margin: 0;
+}
+
+.artist-card .card-text:nth-of-type(1) {
+    grid-area: bio;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.45;
+    color: #667066;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.artist-card .card-text:nth-of-type(2) {
+    grid-area: location;
+    font-size: 0.9rem;
+    color: #667066;
+}
+
+.artist-card .card-text:nth-of-type(3) {
+    grid-area: specialty;
+    margin-bottom: 1rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #d45a3c;
+}
+
+@media (max-width: 900px) {
+    .artist {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .artist h2 {
+        font-size: 35px;
+    }
+
+    .artist-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*Shop
+.shop{
+    padding: 4rem 6rem;
+}
+
+.shop h3 {
+    color: #d45a3c;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.shop h2 {
+    color: #242c27;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 500;
+    line-height: 1.25;
+    margin: 0;
+    max-width: 600px;
+}
+
+.back-btn{
+    color: white;
+    background-color: black;
+    height: 40px;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: ease ease-in-out 0.3s;
+}
+
+.back-btn:hover {
+  background: #0d330e;
+}
+
+.product-card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+*/
+.shop {
+    margin: 4rem 6rem;
+}
+
+.shop h3 {
+    color: #d45a3c;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.shop h2 {
+    color: #242c27;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 500;
+    line-height: 1.25;
+    margin: 0;
+    max-width: 600px;
+}
+
+.back-btn{
+    color: white;
+    background-color: black;
+    height: 40px;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: ease ease-in-out 0.3s;
+}
+
+.back-btn:hover {
+  background: #0d330e;
+}
+
+.product-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.product-card .card-img-top {
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+}
+
+.card-artist {
+    color: #555;
+    margin-bottom: 0.25rem;
+}
+
+.add-to-cart {
+    padding: 0.6rem 1rem;
+    background: #161616;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background: #0d330e;
+}
+
+.add-to-cart:disabled {
+    background: #999;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .shop { margin: 2rem 1.25rem; }
+}
+
+/*Cart*/
+.shop-layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 2rem;
+    align-items: start;
+    margin-top: 2rem;
+}
+
+.shop-layout .product-card {
+    margin-top: 0;
+}
+
+.cart {
+    position: sticky;
+    top: 7rem;
+    padding: 1.25rem;
+    background: #fff;
+    border: 1px solid #161616;
+    border-radius: 8px;
+}
+
+.cart ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cart-item {
+    display: flex;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.cart-item img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.cart-item p {
+    margin: 0 0 0.25rem;
+}
+
+.cart-title {
+    font-weight: 800;
+}
+
+.remove-btn {
+    padding: 0;
+    background: none;
+    border: 0;
+    color: #a31212;
+    font-family: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 992px) {
+    .shop-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .cart {
+        position: static;
+        order: -1;   /* cart above the products on small screens */
     }
 }
