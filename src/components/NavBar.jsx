@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link/dist/react-router-hash-link.cjs.production";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
@@ -29,9 +28,9 @@ export default function NavBar (){
                 </ul>
             </nav>
 
-            <button type="button" className="cart-btn">
+            <HashLink to="/shop#cart" className="cart-btn" style={{ textDecoration: "none" }}>
                 <i className="bi bi-cart" aria-hidden="true"></i> Cart / {cart.length}
-            </button>
+            </HashLink>
             
         </header>
     )

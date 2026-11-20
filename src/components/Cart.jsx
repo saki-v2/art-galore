@@ -1,11 +1,12 @@
 import { useContext } from "react"
+import { Link } from "react-router-dom"
 import { CartContext } from "../context/CartContext"
 
 export default function Cart() {
     const { cart, removeFromCart, cartTotal } = useContext(CartContext)
 
     return (
-        <aside className="cart">
+        <aside className="cart" id="cart" tabIndex={-1}>
             <h3>Your cart</h3>
 
             {cart.length === 0 ? (
@@ -35,6 +36,8 @@ export default function Cart() {
                         <span>Total</span>
                         <strong>KES {cartTotal.toLocaleString()}</strong>
                     </div>
+                    <Link className="checkout-button cart-checkout-button" to="/checkout">Proceed to checkout <span aria-hidden="true">→</span></Link>
+                    <p className="cart-checkout-note">Demo checkout · no payment required</p>
                 </>
             )}
         </aside>

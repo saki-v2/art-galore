@@ -144,6 +144,58 @@
       "quantity": 1,
       "totalAmount": 18500,
       "orderDate": "2026-07-12"
+    },
+    {
+      "id": "AG-519a4e2c-a289-4ff5-8291-47a09c77ff72",
+      "customerName": "weru dennis",
+      "customerEmail": "werudennis19@gmail.com",
+      "customerPhone": "0794860469",
+      "items": [
+        {
+          "artworkId": 9,
+          "title": "The Spotlight",
+          "image": "/images/artworks/artwork9.jpg",
+          "price": 20500,
+          "currency": "KES",
+          "quantity": 1
+        },
+        {
+          "artworkId": 3,
+          "title": "Static in the Static",
+          "image": "/images/artworks/artwork3.jpg",
+          "price": 9900,
+          "currency": "KES",
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 30400,
+      "currency": "KES",
+      "status": "demo-confirmed",
+      "paymentStatus": "not-required",
+      "fulfilment": "none-demo",
+      "orderDate": "2026-11-19T23:27:54.933Z"
+    },
+    {
+      "id": "AG-d1dfeff2-0a31-4984-b834-4f97aaa71924",
+      "customerName": "weru dennis",
+      "customerEmail": "werudennis19@gmail.com",
+      "customerPhone": "0794860469",
+      "items": [
+        {
+          "artworkId": 4,
+          "title": "Digital Reliquary",
+          "image": "/images/artworks/artwork4.jpg",
+          "price": 5500,
+          "currency": "KES",
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 5500,
+      "currency": "KES",
+      "status": "demo-confirmed",
+      "paymentStatus": "not-required",
+      "fulfilment": "none-demo",
+      "orderDate": "2026-11-20T03:59:31.251Z"
     }
   ],
   "reviews": [
@@ -158,6 +210,13 @@
       "comment": "wdwdedede",
       "reviewDate": "2026-11-19",
       "id": 2
+    },
+    {
+      "customerName": "dfgvgr",
+      "artworkId": null,
+      "comment": "vgvfdsfdf",
+      "reviewDate": "2026-11-19",
+      "id": 3
     }
   ]
 }
