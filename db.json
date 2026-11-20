@@ -146,10 +146,10 @@
       "orderDate": "2026-07-12"
     },
     {
-      "id": "AG-519a4e2c-a289-4ff5-8291-47a09c77ff72",
-      "customerName": "weru dennis",
-      "customerEmail": "werudennis19@gmail.com",
-      "customerPhone": "0794860469",
+      "id": "AG-458ae7c4-f004-4c7e-9fcc-ed65f4c7abdf",
+      "customerName": "Alvan Kimani",
+      "customerEmail": "alvan.kimani@student.moringaschool.com",
+      "customerPhone": "0799173230",
       "items": [
         {
           "artworkId": 9,
@@ -158,44 +158,14 @@
           "price": 20500,
           "currency": "KES",
           "quantity": 1
-        },
-        {
-          "artworkId": 3,
-          "title": "Static in the Static",
-          "image": "/images/artworks/artwork3.jpg",
-          "price": 9900,
-          "currency": "KES",
-          "quantity": 1
         }
       ],
-      "totalAmount": 30400,
+      "totalAmount": 20500,
       "currency": "KES",
       "status": "demo-confirmed",
       "paymentStatus": "not-required",
       "fulfilment": "none-demo",
-      "orderDate": "2026-11-19T23:27:54.933Z"
-    },
-    {
-      "id": "AG-d1dfeff2-0a31-4984-b834-4f97aaa71924",
-      "customerName": "weru dennis",
-      "customerEmail": "werudennis19@gmail.com",
-      "customerPhone": "0794860469",
-      "items": [
-        {
-          "artworkId": 4,
-          "title": "Digital Reliquary",
-          "image": "/images/artworks/artwork4.jpg",
-          "price": 5500,
-          "currency": "KES",
-          "quantity": 1
-        }
-      ],
-      "totalAmount": 5500,
-      "currency": "KES",
-      "status": "demo-confirmed",
-      "paymentStatus": "not-required",
-      "fulfilment": "none-demo",
-      "orderDate": "2026-11-20T03:59:31.251Z"
+      "orderDate": "2026-11-20T05:00:29.960Z"
     }
   ],
   "reviews": [
@@ -205,16 +175,16 @@
       "comment": "Beautiful artwork. The colours and details are amazing."
     },
     {
-      "customerName": "wdw",
+      "customerName": "alvan",
       "artworkId": null,
-      "comment": "wdwdedede",
+      "comment": "eggrt",
       "reviewDate": "2026-11-19",
       "id": 2
     },
     {
-      "customerName": "dfgvgr",
+      "customerName": "alvan",
       "artworkId": null,
-      "comment": "vgvfdsfdf",
+      "comment": "wsdd",
       "reviewDate": "2026-11-19",
       "id": 3
     }

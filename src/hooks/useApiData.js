@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 
-// Supports a single list endpoint or several lists loaded together.
 export default function useApiData(urls) {
     const key = JSON.stringify(urls)
     const [attempt, setAttempt] = useState(0)
